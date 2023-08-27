@@ -1,0 +1,103 @@
+/* Apply these styles to your form */
+
+.custom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.custom-container {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form-container {
+  text-align: center;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-form p {
+  color: whitesmoke;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.custom-form-group {
+  max-width: 90%;
+  margin-bottom: 15px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.custom-text-center {
+  text-align: center;
+}
+
+.custom-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #0056b3;
+}
+
+.custom-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.custom-link:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.custom-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.custom-flex-item {
+  font-size: 14px;
+}
+
+.custom-link-btn {
+  background: none;
+  border: 1px solid whitesmoke;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.custom-form-group.custom-text-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
