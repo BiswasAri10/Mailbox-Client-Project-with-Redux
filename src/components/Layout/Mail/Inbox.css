@@ -1,0 +1,20 @@
+.unread{
+  background-color: white;
+
+}
+.read{
+  background-color: #d5d8d5;
+
+}
+.NEW{
+  background-color: #384bc6;
+  padding: 5px;
+  border-radius: 27%;
+
+}
+.READ{
+  background-color: #39ce66;
+  padding: 5px;
+  border-radius: 27%;
+
+}

@@ -1,0 +1,18 @@
+/* inbox img uppercase  */
+.circlename
+{
+  background-color:black;
+  color:white;
+  font-size: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 50px;
+  padding-left: 19px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+}
+.circlename::first-letter{
+    font-size: 20px;
+}

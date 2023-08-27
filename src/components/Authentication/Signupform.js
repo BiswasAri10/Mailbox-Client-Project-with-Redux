@@ -9,7 +9,7 @@ const Signupform = () => {
   const InputemailRef = useRef();
   const InputpasswordRef = useRef();
   const inputCpasswordRef = useRef();
-  const history = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const islogin = useSelector((state) => state.Auth.isAuth);
   const [login, setIslogin] = useState(islogin);
@@ -58,7 +58,7 @@ const Signupform = () => {
           localStorage.setItem("email", data.email);
 
           dispatch(AuthAction.Login({ email: data.email }));
-          history("/dashboard/inbox");
+          navigate("/");
         })
         .catch((err) => {
           alert(err.message);

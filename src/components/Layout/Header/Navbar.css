@@ -1,23 +1,21 @@
-/* Navbar container */
-.custom-navbar {
+.navbar-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0a017c;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
   padding: 5px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid grey;
 }
 
-/* Logo link */
-.custom-logo {
+.navbar-logo {
+  margin: 5px;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   font-size: 24px;
 }
 
-/* Toggler button */
-.custom-toggler {
+.navbar-toggler {
   display: none;
   background-color: transparent;
   border: none;
@@ -26,29 +24,44 @@
   font-size: 20px;
 }
 
-/* Navigation items */
-.custom-nav {
+.navbar-nav {
   list-style: none;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
 }
 
-/* Navigation item */
-.custom-nav-item {
-  margin-right: 20px;
+
+.navbar-nav-item {
+  margin-right: 10px;
 }
 
-/* Navigation link */
-.custom-nav-link {
+.navbar-nav-link {
   text-decoration: none;
   color: #fff;
   font-size: 16px;
 }
 
-/* Button style */
-.custom-btn {
+.navbar-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  margin-top: 8px;
+  margin-right: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+.navbar-btn:hover {
+  text-decoration: none;
+  background-color: #007bff;
+  color: whitesmoke;
+}
+
+.navbar-nav-link {
+  background-color: transparent;
   border: 1px solid #fff;
   padding: 5px 15px;
   border-radius: 5px;
@@ -56,25 +69,30 @@
   color: #fff;
   font-size: 14px;
 }
-.custom-profile-button {
+.navbar-nav-link:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.navbar-profile-button {
   position: relative;
   display: inline-block;
 }
 
-.custom-profile-btn {
-  background-color: #007bff;
+.navbar-profile-btn {
+  background-color: transparent;
   color: #fff;
   border: none;
+  margin-top: 8px;
   padding: 10px 20px;
+  border: 1px solid whitesmoke;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.custom-profile-btn:hover {
-  background-color: #0056b3;
-}
-.custom-dropdown {
+
+.navbar-dropdown {
   display: none;
   position: absolute;
   right: 10px;
@@ -85,12 +103,12 @@
   z-index: 1;
 }
 
-.custom-dropdown-text {
+.navbar-dropdown-text {
   color: #333;
   padding: 10px;
   cursor: pointer;
 }
 
-.custom-nav-item.dropdown:hover .custom-dropdown {
+.navbar-nav-item.dropdown:hover .navbar-dropdown {
   display: block;
 }
