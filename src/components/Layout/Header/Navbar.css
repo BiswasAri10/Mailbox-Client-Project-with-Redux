@@ -1,88 +1,96 @@
 /* Navbar container */
 .custom-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0a017c;
-    padding: 5px 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Logo link */
-  .custom-logo {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-  }
-  
-  /* Toggler button */
-  .custom-toggler {
-    display: none; 
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  /* Navigation items */
-  .custom-nav {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Navigation item */
-  .custom-nav-item {
-    margin-right: 20px;
-  }
-  
-  /* Navigation link */
-  .custom-nav-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-  }
-  
-  /* Button style */
-  .custom-btn {
-    border: 1px solid #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-  }
-  
-  /* Dropdown container */
-  .custom-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 150px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 1;
-  }
-  
-  /* Dropdown text */
-  .custom-dropdown-text {
-    color: #333;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  /* Dropdown icon */
-  .custom-icon {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  /* Show dropdown on hover */
-  .custom-nav-item.dropdown:hover .custom-dropdown {
-    display: block;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a017c;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo link */
+.custom-logo {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Toggler button */
+.custom-toggler {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Navigation items */
+.custom-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation item */
+.custom-nav-item {
+  margin-right: 20px;
+}
+
+/* Navigation link */
+.custom-nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Button style */
+.custom-btn {
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+.custom-profile-button {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-profile-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.custom-profile-btn:hover {
+  background-color: #0056b3;
+}
+.custom-dropdown {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.custom-dropdown-text {
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-nav-item.dropdown:hover .custom-dropdown {
+  display: block;
+}

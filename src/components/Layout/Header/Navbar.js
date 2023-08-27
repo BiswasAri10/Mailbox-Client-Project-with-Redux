@@ -46,20 +46,22 @@ const Navbar = () => {
           )}
           {isAuth && (
             <li className="custom-nav-item dropdown">
-              <i
-                className="fa fa-user custom-icon"
-                aria-hidden="true"
+            <div className="custom-profile-button">
+              <button
+                className="custom-profile-btn"
+                aria-label="Profile"
                 id="navbarDropdown"
                 aria-expanded="false"
-              ></i>
+              >
+                {email}
+              </button>
               <div className="custom-dropdown">
-                <p className="custom-dropdown-text">{email}</p>
-
                 <p className="custom-dropdown-text" onClick={logoutHandler}>
                   Logout
                 </p>
               </div>
-            </li>
+            </div>
+          </li>
           )}
         </ul>
       </div>
