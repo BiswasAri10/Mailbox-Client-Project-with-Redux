@@ -44,6 +44,11 @@ const NewMsg = () => {
       read: false,
     };
 
+    if (sendingEmail === LoggedInUserEmail) {
+      window.alert("You can't send mail to yourself.");
+      return;
+    }
+
     const urlTo = `https://mailbox-project-signup-default-rtdb.firebaseio.com/${sendingEmail}/inbox.json`;
     const urlLoginUser = `https://mailbox-project-signup-default-rtdb.firebaseio.com/${LoggedInUserEmail}/sendBox.json`;
 

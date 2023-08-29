@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar-navbar">
       <Link to={"/"} className="navbar-logo">
-        <h3 className="navbar-logo-text">MailBox</h3>
+        <h3 className="navbar-logo-text">Yahoo!!</h3>
       </Link>
 
       <button

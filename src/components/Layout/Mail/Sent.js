@@ -10,6 +10,7 @@ const Sent = () => {
   const LoggedInUserEmail = loginUser.replace(/[^a-zA-Z0-9]/g, "");
 
   const [selectedEmails, setSelectedEmails] = useState({});
+  
 
   useFetch(
     `https://mailbox-project-signup-default-rtdb.firebaseio.com/${LoggedInUserEmail}/sendBox.json`
