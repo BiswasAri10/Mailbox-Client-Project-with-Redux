@@ -9,6 +9,7 @@ const Sidebar = () => {
   const param = useParams();
   const [read, setRead] = useState();
   const Allinboxmails = useSelector((state) => state.Mail.inboxMails);
+  
   // this is for read ===true
   let convertedArr = Allinboxmails.flat();
   useEffect(() => {
