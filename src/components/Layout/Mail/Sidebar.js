@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, Outlet, useParams } from "react-router-dom";
-import OpenInboxMail from "./OpenMail/OpenInboxMail";
+import OpenMail from "./OpenMail/OpenMail";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -78,7 +78,7 @@ const Sidebar = () => {
               </div>
             </div>
             <div className="col-md-9 col-lg-9 col-sm-9 mt-5">
-              {param.mailId ? <OpenInboxMail /> : <Outlet />}
+              {param.mailId ? <OpenMail /> : <Outlet />}
             </div>
           </div>
         </div>

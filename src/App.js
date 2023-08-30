@@ -6,7 +6,7 @@ import Sidebar from "./components/Layout/Mail/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { AuthAction } from "./Store/AuthSlice";
-import OpenInboxMail from "./components/Layout/Mail/OpenMail/OpenInboxMail";
+import OpenMail from "./components/Layout/Mail/OpenMail/OpenMail";
 import Inbox from "./components/Layout/Mail/Inbox";
 import Sent from "./components/Layout/Mail/Sent";
 import NewMsg from "./components/Layout/Mail/NewMsg";
@@ -28,10 +28,10 @@ function App() {
         {isAuth && (
           <Route path="dashboard" element={<Sidebar />}>
             <Route path="inbox" element={<Inbox />}>
-              <Route path=":mailId" element={<OpenInboxMail />} />
+              <Route path=":mailId" element={<OpenMail />} />
             </Route>
             <Route path="sent" element={<Sent />}>
-              <Route path=":mailId" element={<OpenInboxMail />} />
+              <Route path=":mailId" element={<OpenMail />} />
             </Route>
             <Route path="composemail" element={<NewMsg />} />
           </Route>

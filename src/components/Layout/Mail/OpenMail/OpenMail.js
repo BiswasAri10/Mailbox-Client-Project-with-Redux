@@ -4,7 +4,7 @@ import "../OpenMail/OpenMail.css";
 import { useDispatch, useSelector } from "react-redux";
 import { mailSliceAction } from "../../../../Store/MailSlice";
 
-const OpenInboxMail = () => {
+const OpenMail = () => {
   const params = useParams();
   const mailId = params.mailId;
   const dispatch = useDispatch();
@@ -89,7 +89,7 @@ const OpenInboxMail = () => {
           <div className="card-body">
             {obj.from && (
               <button
-                className="btn-sm border-dark bg-white"
+                className="btn btn-outline-primary"
                 onClick={() => history("/dashboard/inbox")}
               >
                 Back
@@ -97,7 +97,7 @@ const OpenInboxMail = () => {
             )}
             {obj.from && (
               <button
-                className="btn-sm border-dark bg-white ml-2"
+                className="btn btn-outline-danger ml-2"
                 onClick={InboxDeleteHandler}
               >
                 Remove
@@ -105,7 +105,7 @@ const OpenInboxMail = () => {
             )}
             {obj.to && (
               <button
-                className="btn-sm border-dark bg-white"
+                className="btn btn-outline-primary"
                 onClick={() => history("/dashboard/sent")}
               >
                 Back
@@ -113,7 +113,7 @@ const OpenInboxMail = () => {
             )}
             {obj.to && (
               <button
-                className="btn-sm border-dark bg-white  ml-2"
+                className="btn btn-outline-danger  ml-2"
                 onClick={SentDeleteHandler}
               >
                 Remove
@@ -167,4 +167,4 @@ const OpenInboxMail = () => {
   );
 };
 
-export default OpenInboxMail;
+export default OpenMail;

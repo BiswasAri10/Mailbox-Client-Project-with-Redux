@@ -58,7 +58,7 @@ const Signupform = () => {
           localStorage.setItem("email", data.email);
 
           dispatch(AuthAction.Login({ email: data.email }));
-          navigate("/");
+          navigate("/dashboard/inbox");
         })
         .catch((err) => {
           alert(err.message);
