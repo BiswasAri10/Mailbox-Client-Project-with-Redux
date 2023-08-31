@@ -8,24 +8,25 @@ import { Link, useNavigate } from "react-router-dom";
 const Signupform = () => {
   const InputemailRef = useRef();
   const InputpasswordRef = useRef();
-  const inputCpasswordRef = useRef();
+  const inputconfirmPasswordRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const islogin = useSelector((state) => state.Auth.isAuth);
   const [login, setIslogin] = useState(islogin);
+  
   const FormSubmitHandlar = (e) => {
     e.preventDefault();
     const email = InputemailRef.current.value;
     const password = InputpasswordRef.current.value;
 
-    let cpassword;
+    let confirmPassword;
     if (!login) {
-      cpassword = inputCpasswordRef.current.value;
+      confirmPassword = inputconfirmPasswordRef.current.value;
     } else {
-      cpassword = InputpasswordRef.current.value;
+      confirmPassword = InputpasswordRef.current.value;
     }
 
-    if (password === cpassword) {
+    if (password === confirmPassword) {
       let url;
       if (login) {
         url =
@@ -67,7 +68,7 @@ const Signupform = () => {
       InputemailRef.current.value = "";
       InputpasswordRef.current.value = "";
       if (!login) {
-        inputCpasswordRef.current.value = "";
+        inputconfirmPasswordRef.current.value = "";
       }
     } else {
       alert("Passwords do not match");
@@ -120,7 +121,7 @@ const Signupform = () => {
                       type="password"
                       className="custom-input"
                       placeholder="Confirm Password.."
-                      ref={inputCpasswordRef}
+                      ref={inputconfirmPasswordRef}
                       required
                     />
                   </div>

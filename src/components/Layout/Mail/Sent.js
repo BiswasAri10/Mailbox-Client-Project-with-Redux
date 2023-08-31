@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import useFetch from "./CustomHook/SentCustomHook";
+import useSentHook from "./CustomHook/SentHook";
 
 const Sent = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const loginUser = useSelector((state) => state.Auth.userEmail);
   const AddsentMail = useSelector((state) => state.Mail.sentMails);
   const LoggedInUserEmail = loginUser.replace(/[^a-zA-Z0-9]/g, "");
@@ -12,7 +12,7 @@ const Sent = () => {
   const [selectedEmails, setSelectedEmails] = useState({});
   
 
-  useFetch(
+  useSentHook(
     `https://mailbox-project-signup-default-rtdb.firebaseio.com/${LoggedInUserEmail}/sendBox.json`
   );
 
@@ -75,7 +75,7 @@ const Sent = () => {
       ).then((res) => {
         if (res.ok) {
           return res.json().then((data) => {
-            history("/dashboard/sent");
+            navigate("/dashboard/sent");
           });
         } else {
           alert("Something went wrong!");

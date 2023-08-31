@@ -9,6 +9,7 @@ const Sidebar = () => {
   const param = useParams();
   const [read, setRead] = useState();
   const Allinboxmails = useSelector((state) => state.Mail.inboxMails);
+  const AddsentMails = useSelector((state) => state.Mail.sentMails);
   
   // this is for read ===true
   let convertedArr = Allinboxmails.flat();
@@ -65,7 +66,7 @@ const Sidebar = () => {
                       className="btn btn-light btn-block"
                       style={{ fontSize: "20px" }}
                     >
-                      <i className="fa fa-paper-plane mr-2"></i>Sent
+                      <i className="fa fa-paper-plane mr-2"></i>Sent ({AddsentMails.length})
                     </Link>
                     <Link
                       className="btn btn-light btn-block"

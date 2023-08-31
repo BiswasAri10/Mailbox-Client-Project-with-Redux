@@ -2,7 +2,7 @@ import React from "react";
 import Inbox from "./Inbox";
 import Sent from "./Sent";
 import NewMsg from "./NewMsg";
-import OpenInboxMail from "./OpenMail/OpenInboxMail";
+import OpenMail from "./OpenMail/OpenMail";
 
 const MailBox = (props) => {
   if (props.item === "mail") {
@@ -15,7 +15,7 @@ const MailBox = (props) => {
     return <Sent />;
   }
   if (props.item === "open") {
-    return <OpenInboxMail />;
+    return <OpenMail />;
   }
 };
 

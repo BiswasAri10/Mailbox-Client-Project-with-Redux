@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { mailSliceAction } from "../../../../Store/MailSlice";
 
-const useFetch = (url) => {
+const useSentHook = (url) => {
   const dispatch = useDispatch();
   const loginUser = useSelector((state) => state.Auth.userEmail);
   const LoggedInUserEmail = loginUser.replace(/[^a-zA-Z0-9]/g, "");
@@ -27,4 +27,4 @@ const useFetch = (url) => {
   }
 };
 
-export default useFetch;
+export default useSentHook;

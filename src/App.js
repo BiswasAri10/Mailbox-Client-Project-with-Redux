@@ -10,6 +10,7 @@ import OpenMail from "./components/Layout/Mail/OpenMail/OpenMail";
 import Inbox from "./components/Layout/Mail/Inbox";
 import Sent from "./components/Layout/Mail/Sent";
 import NewMsg from "./components/Layout/Mail/NewMsg";
+import Forgotpassword from "./components/Authentication/Forgotpassword";
 function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.Auth.isAuth);
@@ -37,7 +38,7 @@ function App() {
           </Route>
         )}
         <Route path="*" element={<Signupform />} />
-        {/* <Route path="/forgotpassword" element={<Forgotpassword />} /> */}
+        <Route path="/forgotpassword" element={<Forgotpassword />} />
       </Routes>
     </>
   );
