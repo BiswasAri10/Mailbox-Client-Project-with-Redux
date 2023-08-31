@@ -11,9 +11,11 @@ import Inbox from "./components/Layout/Mail/Inbox";
 import Sent from "./components/Layout/Mail/Sent";
 import NewMsg from "./components/Layout/Mail/NewMsg";
 import Forgotpassword from "./components/Authentication/Forgotpassword";
+
 function App() {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.Auth.isAuth);
+  
   useEffect(() => {
     if (localStorage.getItem("token")) {
       dispatch(AuthAction.Login({ email: localStorage.getItem("email") }));

@@ -173,10 +173,10 @@ const Inbox = () => {
                               }}
                             >
                               <span className="bg-dark text-white p-1 rounded">
-                                From-{inboxMails[0].values.from}
+                                From- {inboxMails[0].values.from}
                               </span>
                               &nbsp;
-                              <span className="text-dark">
+                              <span className="text-dark ml-2">
                                 {inboxMails[0].values.subject}
                               </span>
                             </Link>

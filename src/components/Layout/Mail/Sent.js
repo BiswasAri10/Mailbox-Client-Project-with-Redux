@@ -140,10 +140,10 @@ const Sent = () => {
                             }}
                           >
                             <span className="bg-dark text-white p-1 rounded">
-                              To-{sentAry[0].values.to}
+                              To- {sentAry[0].values.to}
                             </span>
                             &nbsp;
-                            <span className="text-dark">
+                            <span className="text-dark ml-2">
                               {sentAry[0].values.subject}
                             </span>
                           </Link>

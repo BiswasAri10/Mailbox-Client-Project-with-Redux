@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 const NewMsg = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const [sending, setSending] = useState(false); 
-  const [sentSuccess, setSentSuccess] = useState(false); 
+  const [sending, setSending] = useState(false);
+  const [sentSuccess, setSentSuccess] = useState(false);
 
   const enteredTo = useRef();
   const subject = useRef();
@@ -28,18 +28,26 @@ const NewMsg = () => {
     const Sub = subject.current.value;
     const msg = editorState.getCurrentContent().getPlainText();
 
-    const currentDate = {
-      date: `${new Date().getDate()}/${
-        new Date().getMonth() + 1
-      }/${new Date().getFullYear()}`,
-      time: `${new Date().getHours()}:${new Date().getMinutes()}`,
-    };
+    const currentDate = new Date();
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const ampm = hours >= 12 ? "PM" : "AM";
+    const formattedHours = hours % 12 || 12;
+
+    const formattedTime = `${formattedHours}:${
+      minutes < 10 ? "0" : ""
+    }${minutes} ${ampm}`;
 
     const msgObj = {
       to: toReciverEmail,
       subject: Sub,
       msgBody: msg,
-      date: currentDate,
+      date: {
+        date: `${currentDate.getDate()}/${
+          currentDate.getMonth() + 1
+        }/${currentDate.getFullYear()}`,
+        time: formattedTime,
+      },
       from: loginUser,
       read: false,
     };
@@ -76,7 +84,7 @@ const NewMsg = () => {
             if (res.ok) {
               enteredTo.current.value = "";
               subject.current.value = "";
-              window.alert("Email sent successfully!"); 
+              window.alert("Email sent successfully!");
               setEditorState(EditorState.createEmpty());
             }
           });
@@ -126,7 +134,7 @@ const NewMsg = () => {
               </div>
             </div>
             <div className="modal-footer">
-            {!sending && !sentSuccess && (
+              {!sending && !sentSuccess && (
                 <button type="submit" className="btn btn-dark pull-right">
                   <i className="fa fa-envelope"></i> Send Email
                 </button>
